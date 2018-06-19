@@ -4,6 +4,7 @@ buildscript {
     ext.kotlin_version = '1.2.41'
     ext.timber_version = '4.7.0'
     ext.recycler_view_version = '1.0.0-alpha3'
+    ext.material_version = '1.0.0-alpha3'
     repositories {
         google()
         jcenter()
