@@ -3,10 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/container_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <include layout="@layout/app_bar_main" />
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
