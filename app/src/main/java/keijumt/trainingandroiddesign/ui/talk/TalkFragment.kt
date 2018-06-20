@@ -5,8 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import keijumt.trainingandroiddesign.BaseFragment
 import keijumt.trainingandroiddesign.R
+import keijumt.trainingandroiddesign.model.Talk
+import keijumt.trainingandroiddesign.util.TimeUtil
+import kotlinx.android.synthetic.main.fragment_talk.view.*
+import java.util.*
 
 class TalkFragment : BaseFragment() {
 
@@ -18,12 +23,35 @@ class TalkFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_talk, container, false)
+        val view = inflater.inflate(R.layout.fragment_talk, container, false)
+        val adapter = TalkAdapter()
+        val talks = createDummyData()
+        view.recycler_talk.also {
+            it.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
+            it.adapter = adapter
+        }
+        adapter.appendTalk(talks.sortedBy { it.date })
+        return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         viewModel = ViewModelProviders.of(this).get(TalkViewModel::class.java)
+    }
+
+    private fun createDummyData(): List<Talk> {
+        val talks = arrayListOf<Talk>()
+        for (i in 0 until 20) {
+            talks.add(
+                    Talk(
+                            name = "test name",
+                            text = UUID.randomUUID().toString(),
+                            date = TimeUtil.getRandomDate()
+                    )
+            )
+        }
+        return talks
     }
 
 }

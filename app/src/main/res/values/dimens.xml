@@ -10,4 +10,17 @@
     <dimen name="spacing_x_large">32dp</dimen>
     <dimen name="spacing_xx_large">64dp</dimen>
     <dimen name="spacing_xxx_large">128dp</dimen>
+
+    <!-- 文字サイズ -->
+    <!-- 文字サイズ -->
+    <dimen name="text_size_xxx_small">8dp</dimen>
+    <dimen name="text_size_xx_small">10dp</dimen>
+    <dimen name="text_size_x_small">12dp</dimen>
+    <dimen name="text_size_small">14dp</dimen>
+    <dimen name="text_size_medium">16dp</dimen>
+    <dimen name="text_size_large">20dp</dimen>
+    <dimen name="text_size_x_large">24dp</dimen>
+    <dimen name="text_size_xx_large">28dp</dimen>
+    <dimen name="text_size_xxx_large">32dp</dimen>
+    <dimen name="text_size_xxxx_large">64dp</dimen>
 </resources>
