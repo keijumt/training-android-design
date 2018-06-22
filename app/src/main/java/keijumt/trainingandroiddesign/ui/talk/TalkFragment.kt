@@ -31,6 +31,7 @@ class TalkFragment : BaseFragment() {
             it.adapter = adapter
         }
         adapter.appendTalk(talks.sortedBy { it.date })
+        view.recycler_talk.scrollToPosition(adapter.talks.size - 1)
         return view
     }
 
