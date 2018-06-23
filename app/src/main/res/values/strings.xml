@@ -4,4 +4,6 @@
     <string name="home">Home</string>
     <string name="specify_jump">ジャンプ先を指定</string>
     <string name="workspace">ワークスペース</string>
+    <string name="direct_message">ダイレクトメッセージ</string>
+    <string name="item_star">スター付きアイテム</string>
 </resources>
