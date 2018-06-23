@@ -23,4 +23,6 @@
     <dimen name="text_size_xx_large">28dp</dimen>
     <dimen name="text_size_xxx_large">32dp</dimen>
     <dimen name="text_size_xxxx_large">64dp</dimen>
+
+    <dimen name="talk_info_state_icon_size">12dp</dimen>
 </resources>

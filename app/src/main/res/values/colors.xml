@@ -5,4 +5,10 @@
     <color name="colorAccent">#008577</color>
 
     <color name="textColorBlack">#000000</color>
+
+    <!-- border -->
+    <color name="border_color">#AAAAAA</color>
+
+    <!-- ripple -->
+    <color name="rippleColor">#CCCCCC</color>
 </resources>
