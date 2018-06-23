@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TrainingAndroidDesign</string>
     <string name="talk_info">プロジェクトabc</string>
+    <string name="home">Home</string>
+    <string name="specify_jump">ジャンプ先を指定</string>
+    <string name="workspace">ワークスペース</string>
 </resources>

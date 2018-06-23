@@ -5,6 +5,8 @@
     <color name="colorAccent">#008577</color>
 
     <color name="textColorBlack">#000000</color>
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="textColorGrey">#CCCCCC</color>
 
     <!-- border -->
     <color name="border_color">#AAAAAA</color>

@@ -15,4 +15,16 @@ open class BaseActivity : AppCompatActivity() {
                 .commit()
     }
 
+    protected fun replaceFragment(fragment: Fragment, containerViewId: Int) {
+        supportFragmentManager.findFragmentById(containerViewId) ?: return
+        supportFragmentManager
+                .beginTransaction()
+                .replace(containerViewId, fragment)
+                .commit()
+    }
+
+    protected fun currentFragment(containerViewId: Int): Fragment? {
+        return supportFragmentManager.findFragmentById(containerViewId)
+    }
+
 }
