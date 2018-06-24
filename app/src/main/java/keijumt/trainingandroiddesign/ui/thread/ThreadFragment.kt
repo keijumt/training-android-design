@@ -71,7 +71,4 @@ class ThreadFragment : BaseFragment() {
         threadViewModel = ViewModelProviders.of(requireActivity()).get(ThreadViewModel::class.java)
         mainViewModel = ViewModelProviders.of(requireActivity()).get(MainViewModel::class.java)
     }
-
-    fun showPopup(view: View) {
-    }
 }
