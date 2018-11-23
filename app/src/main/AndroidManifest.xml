@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.youtube.YoutubeActivity"></activity>
         <activity android:name=".ui.navigation.NavigateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="keijumt.trainingandroiddesign.ui.slack.main.SlackActivity" />
+        <activity android:name=".ui.slack.main.SlackActivity" />
     </application>
 
 </manifest>

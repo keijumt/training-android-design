@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import keijumt.trainingandroiddesign.R
 import keijumt.trainingandroiddesign.ui.slack.main.SlackActivity
+import keijumt.trainingandroiddesign.ui.youtube.YoutubeActivity
 import kotlinx.android.synthetic.main.activity_navigate.*
 
 class NavigateActivity : AppCompatActivity() {
@@ -14,6 +15,10 @@ class NavigateActivity : AppCompatActivity() {
 
         btn_start_slack.setOnClickListener {
             startActivity(SlackActivity.createIntent(this))
+        }
+
+        btn_start_youtube.setOnClickListener {
+            startActivity(YoutubeActivity.createIntent(this))
         }
 
     }
