@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import keijumt.trainingandroiddesign.R
+import keijumt.trainingandroiddesign.ui.youtube.player.PlayerFragment
 
 class YoutubeFragment : Fragment() {
 
@@ -16,6 +17,12 @@ class YoutubeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_youtube, container, false)
+        val view = inflater.inflate(R.layout.fragment_youtube, container, false)
+
+        childFragmentManager.beginTransaction()
+                .replace(R.id.container, PlayerFragment.newInstance())
+                .commitNow()
+
+        return view
     }
 }
