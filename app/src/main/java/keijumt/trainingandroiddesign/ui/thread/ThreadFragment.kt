@@ -11,7 +11,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProviders
 import keijumt.trainingandroiddesign.BaseFragment
 import keijumt.trainingandroiddesign.R
-import keijumt.trainingandroiddesign.ui.main.MainViewModel
+import keijumt.trainingandroiddesign.ui.main.SlackViewModel
 import kotlinx.android.synthetic.main.fragment_thread.view.*
 import kotlinx.android.synthetic.main.menu_thread.view.*
 
@@ -23,13 +23,13 @@ class ThreadFragment : BaseFragment() {
     }
 
     private lateinit var threadViewModel: ThreadViewModel
-    private lateinit var mainViewModel: MainViewModel
+    private lateinit var mainViewModel: SlackViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_thread, container, false)
         view.container_workspace_list.setOnClickListener {
-            mainViewModel.event.value = MainViewModel.Event.Workspaces
+            mainViewModel.event.value = SlackViewModel.Event.Workspaces
         }
         setHasOptionsMenu(true)
 
@@ -69,6 +69,6 @@ class ThreadFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         threadViewModel = ViewModelProviders.of(requireActivity()).get(ThreadViewModel::class.java)
-        mainViewModel = ViewModelProviders.of(requireActivity()).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProviders.of(requireActivity()).get(SlackViewModel::class.java)
     }
 }

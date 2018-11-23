@@ -1,5 +1,7 @@
 package keijumt.trainingandroiddesign.ui.main
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.drawerlayout.widget.DrawerLayout
@@ -10,13 +12,17 @@ import keijumt.trainingandroiddesign.R
 import keijumt.trainingandroiddesign.ui.talk.TalkFragment
 import keijumt.trainingandroiddesign.ui.thread.ThreadFragment
 import keijumt.trainingandroiddesign.ui.workspaces.WorkspaceFragment
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_slack.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
-class MainActivity : BaseActivity() {
+class SlackActivity : BaseActivity() {
 
-    private val viewModel: MainViewModel by lazy {
-        ViewModelProviders.of(this).get(MainViewModel::class.java)
+    companion object {
+        fun createIntent(context: Context): Intent = Intent(context, SlackActivity::class.java)
+    }
+
+    private val slackViewModel: SlackViewModel by lazy {
+        ViewModelProviders.of(this).get(SlackViewModel::class.java)
     }
 
     private var threadFragment: ThreadFragment? = null
@@ -24,7 +30,7 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_slack)
 
         // Main
         addFragment(TalkFragment.newInstance(), R.id.container_main)
@@ -60,13 +66,13 @@ class MainActivity : BaseActivity() {
     }
 
     private fun subscribe() {
-        viewModel.event.observe(this, Observer {
+        slackViewModel.event.observe(this, Observer {
             when (it) {
-                MainViewModel.Event.Thread -> {
+                SlackViewModel.Event.Thread -> {
                     replaceFragment(threadFragment
                             ?: ThreadFragment.newInstance().also { threadFragment = it }, R.id.container_drawer)
                 }
-                MainViewModel.Event.Workspaces -> {
+                SlackViewModel.Event.Workspaces -> {
                     replaceFragment(workspaceFragment
                             ?: WorkspaceFragment.newInstance().also { workspaceFragment = it }, R.id.container_drawer)
                 }

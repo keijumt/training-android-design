@@ -3,7 +3,7 @@ package keijumt.trainingandroiddesign.ui.main
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
+class SlackViewModel : ViewModel() {
     enum class Event {
         Thread,
         Workspaces

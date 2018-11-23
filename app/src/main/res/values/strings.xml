@@ -6,4 +6,5 @@
     <string name="workspace">ワークスペース</string>
     <string name="direct_message">ダイレクトメッセージ</string>
     <string name="item_star">スター付きアイテム</string>
+    <string name="slack">slack</string>
 </resources>
