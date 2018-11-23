@@ -8,4 +8,7 @@
     <string name="item_star">スター付きアイテム</string>
     <string name="slack">slack</string>
     <string name="youtube">youtube</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

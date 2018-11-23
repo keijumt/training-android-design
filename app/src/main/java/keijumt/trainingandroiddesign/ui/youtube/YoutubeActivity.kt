@@ -15,5 +15,12 @@ class YoutubeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtube)
+
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                    .beginTransaction()
+                    .add(R.id.container_youtube, YoutubeFragment.newInstance())
+                    .commitNow()
+        }
     }
 }
