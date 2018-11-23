@@ -1,4 +1,4 @@
-package keijumt.trainingandroiddesign.ui.main
+package keijumt.trainingandroiddesign.ui.slack.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

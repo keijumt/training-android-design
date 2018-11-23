@@ -1,4 +1,4 @@
-package keijumt.trainingandroiddesign.ui.main
+package keijumt.trainingandroiddesign.ui.slack.main
 
 import android.content.Context
 import android.content.Intent
@@ -9,9 +9,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import keijumt.trainingandroiddesign.BaseActivity
 import keijumt.trainingandroiddesign.R
-import keijumt.trainingandroiddesign.ui.talk.TalkFragment
-import keijumt.trainingandroiddesign.ui.thread.ThreadFragment
-import keijumt.trainingandroiddesign.ui.workspaces.WorkspaceFragment
+import keijumt.trainingandroiddesign.ui.slack.talk.TalkFragment
+import keijumt.trainingandroiddesign.ui.slack.thread.ThreadFragment
+import keijumt.trainingandroiddesign.ui.slack.workspaces.WorkspaceFragment
 import kotlinx.android.synthetic.main.activity_slack.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 

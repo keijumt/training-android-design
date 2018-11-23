@@ -1,4 +1,4 @@
-package keijumt.trainingandroiddesign.ui.thread
+package keijumt.trainingandroiddesign.ui.slack.thread
 
 import android.os.Bundle
 import android.util.TypedValue
@@ -11,7 +11,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProviders
 import keijumt.trainingandroiddesign.BaseFragment
 import keijumt.trainingandroiddesign.R
-import keijumt.trainingandroiddesign.ui.main.SlackViewModel
+import keijumt.trainingandroiddesign.ui.slack.main.SlackViewModel
 import kotlinx.android.synthetic.main.fragment_thread.view.*
 import kotlinx.android.synthetic.main.menu_thread.view.*
 

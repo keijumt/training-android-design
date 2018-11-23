@@ -1,4 +1,4 @@
-package keijumt.trainingandroiddesign.ui.workspaces
+package keijumt.trainingandroiddesign.ui.slack.workspaces
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import keijumt.trainingandroiddesign.R
-import keijumt.trainingandroiddesign.ui.main.SlackViewModel
+import keijumt.trainingandroiddesign.ui.slack.main.SlackViewModel
 import kotlinx.android.synthetic.main.fragment_workspace.view.*
 
 class WorkspaceFragment : Fragment() {

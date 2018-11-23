@@ -1,4 +1,4 @@
-package keijumt.trainingandroiddesign.ui.talk
+package keijumt.trainingandroiddesign.ui.slack.talk
 
 import androidx.lifecycle.ViewModel
 
