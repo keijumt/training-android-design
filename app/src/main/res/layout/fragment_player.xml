@@ -9,14 +9,25 @@
 
     <FrameLayout
         android:id="@+id/view_video"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:background="#ff0000"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/recycler_video"
+        app:layout_constraintDimensionRatio="h,16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/snowboard"
+        app:layout_constraintBottom_toBottomOf="@id/view_video"
+        app:layout_constraintEnd_toEndOf="@id/view_video"
+        app:layout_constraintStart_toStartOf="@id/view_video"
+        app:layout_constraintTop_toTopOf="@id/view_video" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_video"
